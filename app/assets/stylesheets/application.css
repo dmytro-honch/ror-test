@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#root {
+    height: 100%;
+
+    --main-text-color: #222;
+    --link-color: #007bff;
+    --link-color-hover: #0056b3;
+    --active-link-color: #cf0000;
+}
+
+div, header, footer, nav, section, article, aside, main {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-text-color);
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-menu__wrapper {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.main-menu__list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-menu__item {
+    margin-right: 15px;
+}
+
+.main-menu__item a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.main-menu__item a:hover {
+    color: var(--link-color-hover);
+}
+
+.main-menu__item a.active {
+    color: var(--active-link-color);
+}
